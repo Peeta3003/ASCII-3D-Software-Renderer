@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Compile the Swift files into an executable
+case "$1" in
+    "cube") OBJECT="Objects/Cube.swift" ;;
+    "diamond") OBJECT="Objects/Diamond.swift" ;;
+    "icosphere") OBJECT="Objects/Icosphere.swift" ;;
+    "pyramid") OBJECT="Objects/Pyramid.swift" ;;
+    *)
+        echo "Usage: ./run [cube|diamond|icosphere|pyramid]"
+        exit 1
+        ;;
+esac
+
+swiftc main.swift Math/Vector.swift "$OBJECT" Renderer/Renderer.swift Transform/transform.swift -o app
