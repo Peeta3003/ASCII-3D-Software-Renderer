@@ -4,6 +4,10 @@ A minimal 3D software renderer written in Swift that renders shaded triangles di
 
 This project implements core concepts from the graphics pipeline without relying on external graphics libraries.
 
+## Demo
+
+![Demo](./Media/icosphere-demo.gif)
+
 ## Features
 
 - Perspective projection (3D → 2D)
