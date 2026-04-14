@@ -28,6 +28,7 @@ while true {
         renderer.drawLine(p0: rotatedVertices[edge.0], p1: rotatedVertices[edge.1])
     }
      */
+     
     
     for face in icoFaces {
         renderer.drawTriangle(
@@ -36,6 +37,7 @@ while true {
             v2: rotatedVertices[face.2]
         )
     }
+     
     
     // Move cursor to top-left to redraw
     print("\u{001B}[H", terminator: "")
