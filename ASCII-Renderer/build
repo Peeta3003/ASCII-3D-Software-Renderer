@@ -7,7 +7,7 @@ case "$1" in
     "icosphere") OBJECT="Objects/Icosphere.swift" ;;
     "pyramid") OBJECT="Objects/Pyramid.swift" ;;
     *)
-        echo "Usage: ./run [cube|diamond|icosphere|pyramid]"
+        echo "Usage: ./build [cube|diamond|icosphere|pyramid]"
         exit 1
         ;;
 esac
