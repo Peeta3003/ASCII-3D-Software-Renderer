@@ -11,9 +11,6 @@ var theta: Double = 0
 
 let renderer = Renderer()
 
-// Hide cursor for better visuals
-//print("\u{001B}[?25l", terminator: "")
-
 while true {
     renderer.buffer = Array(repeating: Array(repeating: " ", count: renderer.width), count: renderer.height)
     renderer.zBuffer = Array(repeating: Array(repeating: -Double.infinity, count: renderer.width), count: renderer.height)
