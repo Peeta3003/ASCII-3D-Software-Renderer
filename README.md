@@ -6,7 +6,7 @@ This project implements core concepts from the graphics pipeline without relying
 
 ## Demo
 
-![Demo](./Media/icosphere-demo.gif)
+![Demo](./Media/torus-demo.gif)
 
 ## Features
 
@@ -56,7 +56,7 @@ The result is mapped to ASCII characters:
 ## Run
 
 ```bash
-./build [cube|diamond|icosphere|pyramid]
+./build
 ./app
 ```
 

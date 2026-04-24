@@ -7,6 +7,7 @@
 
 import Foundation
 
+let renderMesh = torusMesh
 var theta: Double = 0
 
 let renderer = Renderer()
@@ -16,7 +17,7 @@ while true {
     renderer.zBuffer = Array(repeating: Array(repeating: -Double.infinity, count: renderer.width), count: renderer.height)
         
     
-    let rotatedVertices = icoVertices.map { v -> Vector3 in
+    let rotatedVertices = renderMesh.vertices.map { v -> Vector3 in
         var rotated = v
         rotated = rotateY(rotated, theta: theta)
         rotated = rotateX(rotated, theta: theta/2)
@@ -24,20 +25,19 @@ while true {
     }
     
     /*
-    for edge in cubeEdges {
+    for edge in renderMesh.edges {
         renderer.drawLine(p0: rotatedVertices[edge.0], p1: rotatedVertices[edge.1])
     }
      */
      
     
-    for face in icoFaces {
+    for face in renderMesh.faces {
         renderer.drawTriangle(
             v0: rotatedVertices[face.0],
             v1: rotatedVertices[face.1],
             v2: rotatedVertices[face.2]
         )
     }
-     
     
     // Move cursor to top-left to redraw
     print("\u{001B}[H", terminator: "")
