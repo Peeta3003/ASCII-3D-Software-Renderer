@@ -6,7 +6,7 @@ This project implements core concepts from the graphics pipeline without relying
 
 ## Demo
 
-![Demo](./Media/torus-demo.gif)
+![Demo](./Media/icosphere-demo.gif)
 
 ## Features
 
